@@ -15,3 +15,9 @@ console.log('Starting the miner....')
 myCoin.minePendingTransactions(myWalletAddress)
 
 console.log('Balance of myWallet: ', myCoin.getBalanceOfAddress(myWalletAddress))
+
+myCoin.chain[1].transactions[0].amount = 1;
+
+console.log('Balance of myWallet after fraudulent transaction: ', myCoin.getBalanceOfAddress(myWalletAddress))
+
+console.log('Is Chain valid?', myCoin.isChainValid());
